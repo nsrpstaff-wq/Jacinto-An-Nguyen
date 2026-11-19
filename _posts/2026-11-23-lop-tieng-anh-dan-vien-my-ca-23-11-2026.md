@@ -27,6 +27,8 @@ Bài học hôm nay dựa trên một bản tin của Vatican News. Trong bản 
 
 Mỗi cụm từ đều có nghĩa tiếng Việt, mẫu câu và ví dụ đặt câu.
 
+*Nguồn bài đọc: [Vatican News, "Cardinal Czerny Urges Human Accountability For AI In Warfare"](https://www.vaticannews.va/en/vatican-city/news/2026-11/cardinal-michael-czerny-magnifica-humanitas-just-war-ai.html).*
+
 <p class="downloads">
   <a class="button" href="{{ page.doc_pdf | relative_url }}">Tải bản PDF</a>
 </p>
