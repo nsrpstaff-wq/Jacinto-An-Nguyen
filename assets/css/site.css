@@ -272,3 +272,12 @@ img { max-width: 100%; height: auto; }
 .book-details { margin: .4rem 0 0; font-family: var(--sans); font-size: .82rem; color: var(--muted); }
 .book-rating { margin: .4rem 0 0; color: var(--accent); letter-spacing: .12em; font-size: 1.05rem; }
 @media (max-width: 480px) { .book-cover { width: 5rem; } }
+
+/* ---------- Embedded PDF ---------- */
+.pdf-frame { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.pdf-frame object { display: block; width: 100%; height: min(85vh, 1100px); }
+.pdf-frame object p { padding: 1rem 1.25rem; margin: 0; }
+
+/* Long links (e.g. URLs in citations) wrap instead of overflowing on phones */
+.prose { overflow-wrap: break-word; }
+.prose a { overflow-wrap: anywhere; }
