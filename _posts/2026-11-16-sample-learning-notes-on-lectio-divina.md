@@ -1,7 +1,7 @@
 ---
 title: "Sample learning notes: Four movements of lectio divina"
 category: learning
-summary: A sample of the Learning section, where reading notes and short summaries go.
+summary: A sample post for the Teaching English and Skills section.
 tags: [sample, reading notes]
 ---
 

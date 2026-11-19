@@ -55,7 +55,7 @@ summary: One sentence shown in the list of posts.
 Write your reflection here.
 ```
 
-### Learning notes (section: Learning)
+### Teaching English and Skills (category: learning)
 
 ```markdown
 ---

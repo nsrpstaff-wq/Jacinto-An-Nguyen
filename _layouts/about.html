@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-{% assign n_papers = site.posts | where: "category", "papers" | size %}
-{% assign n_refl = site.posts | where: "category", "reflections" | size %}
-{% assign n_learn = site.posts | where: "category", "learning" | size %}
 
 <section class="wrap about-hero">
   <div class="about-hero-text">
@@ -28,9 +25,10 @@ layout: default
 
 <section class="wrap">
   <dl class="stats">
-    <div><dt>Papers</dt><dd>{{ n_papers }}</dd></div>
-    <div><dt>Reflections</dt><dd>{{ n_refl }}</dd></div>
-    <div><dt>Learning notes</dt><dd>{{ n_learn }}</dd></div>
+    {% for sec in site.sections %}
+      {% assign n = site.posts | where: "category", sec.key | size %}
+      <div><dt>{{ sec.title }}</dt><dd>{{ n }}</dd></div>
+    {% endfor %}
     {% for s in page.extra_stats %}
       <div><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>
     {% endfor %}
