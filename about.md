@@ -12,10 +12,11 @@ permalink: /about/
 # ---- Opening ----
 eyebrow: "A little about me"
 greeting: "Hi, I'm Jacinto An Nguyen,"
-identity: "a student of theology, writing as I learn."
-# Tip: add a sentence or two more below — where you study, what you are drawn to.
+identity: "a Cistercian monk studying theology and philosophy."
 intro: >-
-  This is a place where I will share my experience of researching.
+  I am a monk of the Cistercian Abbey of Mỹ Ca in Việt Nam and a doctoral
+  student in Religious Studies at Marquette University. This is a place where
+  I share my experience of researching, teaching, and learning.
 photo: "/assets/images/portrait.jpg"                  # e.g. /assets/images/me.jpg  (leave "" to show your initials)
 initials: "JN"
 
@@ -42,18 +43,24 @@ stages:
   - label: "Before"
     title: "Where I come from"
     text: >-
-      Write a few sentences about your background: where you grew up,
-      what you studied or did before theology, the people who shaped you.
+      I come from Việt Nam, where I am a monk of the Cistercian Abbey of Mỹ Ca.
+      Monastic life, with its daily rhythm of prayer and work under the Rule of
+      Saint Benedict, is the ground from which my questions about God and the
+      human person have grown.
   - label: "Turning point"
-    title: "What drew me to theology"
+    title: "What drew me to theology and philosophy"
     text: >-
-      Describe the moment, person, book or experience that turned you
-      toward this path. A concrete scene works better than a summary.
+      Theology and philosophy help me understand more deeply what it means to be
+      human, and how the grace of God is at work in us. Through them I have learned
+      to see the love of God in other people and in all of creation.
   - label: "Now"
     title: "What I'm studying and writing"
     text: >-
-      Say what you are working on now: your program, the topics you are
-      researching, and what you hope this site becomes.
+      I am pursuing a Ph.D. in Religious Studies at Marquette University in
+      Milwaukee, Wisconsin. My research is in Christian anthropology, especially
+      how the Western Christian understanding of the human person can be brought
+      into conversation with the vision of humanity in Confucianism. Here I share
+      my papers, book reviews, and the English lessons I teach.
 
 # ---- Photos (optional) ----
 # Upload images to assets/images, then list them here.
