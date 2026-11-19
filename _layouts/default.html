@@ -6,7 +6,7 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
   {% include header.html %}
-  <main id="main">
+  <main id="main"{% if page.layout == "home" %} class="ends-with-band"{% endif %}>
     {{ content }}
   </main>
   {% include footer.html %}

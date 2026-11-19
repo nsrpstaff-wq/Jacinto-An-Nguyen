@@ -1,25 +1,54 @@
 ---
 layout: default
 ---
-<section class="hero wrap">
-  <h1>{{ site.title }}</h1>
-  <p class="lede">{{ site.description }}</p>
+{% assign latest = site.posts | first %}
+<section class="hero-band{% if site.hero_image %} has-image{% endif %}"{% if site.hero_image %} style="background-image: url('{{ site.hero_image | relative_url }}')"{% endif %}>
+  <div class="wrap hero">
+    <span class="gold-bar" aria-hidden="true"></span>
+    <h1>{{ site.title }}<em>{{ site.hero_line }}</em></h1>
+    <p class="lede">{{ site.description }}</p>
+    <div class="hero-actions">
+      {% if latest %}<a class="button" href="{{ latest.url | relative_url }}">Read the latest</a>{% endif %}
+      <a class="button button-light" href="{{ '/about/' | relative_url }}">About me</a>
+    </div>
+  </div>
 </section>
 
-<section class="sections wrap" aria-label="Sections">
-  {% for s in site.sections %}
-    {% assign count = site.posts | where: "category", s.key | size %}
-    <a class="section-card" href="{{ s.url | relative_url }}">
-      <span class="section-name">{{ s.title }}</span>
-      <span class="section-blurb">{{ s.blurb }}</span>
-      <span class="section-count">{{ count }} {% if count == 1 %}piece{% else %}pieces{% endif %}</span>
-    </a>
-  {% endfor %}
+<section class="wrap home-block" aria-labelledby="explore-title">
+  <span class="gold-bar" aria-hidden="true"></span>
+  <h2 class="block-title" id="explore-title">Explore the <em>writing.</em></h2>
+  <div class="sections">
+    {% for s in site.sections %}
+      <a class="section-card" href="{{ s.url | relative_url }}">
+        <span class="section-name">{{ s.title }}</span>
+        <span class="section-blurb">{{ s.blurb }}</span>
+        <span class="section-link">Browse →</span>
+      </a>
+    {% endfor %}
+  </div>
 </section>
 
-<section class="wrap narrow">
+<section class="numbers-band" aria-labelledby="numbers-title">
+  <div class="wrap">
+    <div class="numbers-card">
+      <span class="gold-bar" aria-hidden="true"></span>
+      <h2 class="block-title" id="numbers-title">By the <em>numbers.</em></h2>
+      <dl class="numbers">
+        {% for s in site.sections %}
+          {% assign n = site.posts | where: "category", s.key | size %}
+          <div>
+            <dd>{{ n }}</dd>
+            <dt>{{ s.title }}<span class="note">{% if n == 1 %}piece{% else %}pieces{% endif %} published</span></dt>
+          </div>
+        {% endfor %}
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="wrap narrow home-block">
   <h2 class="list-heading">Recent writing</h2>
-  {% assign recent = site.posts | slice: 0, 8 %}
+  {% assign recent = site.posts | slice: 0, 6 %}
   {% if recent.size > 0 %}
     {% include post-list.html posts=recent %}
     <p class="more"><a href="{{ '/archive/' | relative_url }}">See everything →</a></p>
@@ -27,3 +56,12 @@ layout: default
     <p class="empty">Nothing published yet.</p>
   {% endif %}
 </section>
+
+{% if latest %}
+<section class="cta-band">
+  <div class="wrap cta-inner">
+    <p>New here? Start with <em>the latest.</em></p>
+    <a class="button" href="{{ latest.url | relative_url }}">Read it now</a>
+  </div>
+</section>
+{% endif %}

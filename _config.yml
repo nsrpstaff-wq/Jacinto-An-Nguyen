@@ -4,6 +4,8 @@
 # ---------------------------------------------------------------
 title: Notes Along the Way
 tagline: Papers, reflections, and things I am learning.
+hero_line: Papers, lessons, and reflections.   # gold italic line under the title on the home page
+# hero_image: /assets/images/your-photo.jpg   # optional: a wide photo behind the home page title
 description: >-
   A place to publish academic papers, share experiences, and keep
   notes on what I am learning.
