@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <a class="brand" href="{{ '/' | relative_url }}">{% if site.logo %}<img class="brand-logo" src="{{ site.logo | relative_url }}" alt="" width="48" height="48">{% endif %}<span>{{ site.title }}</span></a>
     <nav class="nav" aria-label="Main">
       {% for s in site.sections %}
         <a href="{{ s.url | relative_url }}"{% if page.url == s.url %} aria-current="page"{% endif %}>{{ s.title }}</a>

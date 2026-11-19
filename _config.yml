@@ -5,6 +5,7 @@
 title: Notes Along the Way
 tagline: Papers, reflections, and things I am learning.
 hero_line: Papers, lessons, and reflections.   # gold italic line under the title on the home page
+logo: /assets/images/logo-mark.png   # round badge next to the site title
 hero_image: /assets/images/hero-calligraphy.jpg   # picture in the home page title area (remove the line to hide it)
 hero_image_alt: "Vietnamese calligraphy scroll"
 description: >-

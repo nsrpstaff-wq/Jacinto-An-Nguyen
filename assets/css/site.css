@@ -103,7 +103,9 @@ img { max-width: 100%; height: auto; }
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
   gap: .5rem 1.5rem; padding-top: 1rem; padding-bottom: 1rem;
 }
-.brand { font-weight: 700; font-size: 1.3rem; color: #fff; text-decoration: none; letter-spacing: -0.01em; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; font-weight: 700; font-size: 1.3rem; color: #fff; text-decoration: none; letter-spacing: -0.01em; }
+.brand-logo { width: 3rem; height: 3rem; border-radius: 50%; box-shadow: 0 0 0 2px var(--gold); flex: none; }
+@media (max-width: 480px) { .brand-logo { width: 2.5rem; height: 2.5rem; } }
 .nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.2rem; font-family: var(--sans); font-size: .82rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
 .nav a { color: rgba(255,255,255,.82); text-decoration: none; padding: .2rem 0; border-bottom: 2px solid transparent; }
 .nav a:hover { color: #fff; }
