@@ -2,14 +2,14 @@
 ---
 /* ---------- Theme tokens ---------- */
 :root {
-  --bg: #e1e3f8;
-  --surface: #eef0fc;
-  --text: #1e1b3a;
-  --muted: #57567a;
-  --line: #c6c9ec;
-  --accent: #4b45b8;
-  --accent-soft: #d3d0f5;
-  --code-bg: #d6d9f3;
+  --bg: #dbe8fb;
+  --surface: #eef4fe;
+  --text: #10213d;
+  --muted: #475877;
+  --line: #c8313a;
+  --accent: #1d4ea8;
+  --accent-soft: #cddff8;
+  --code-bg: #cfe0f6;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
   --measure: 42rem;
@@ -17,26 +17,26 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #16162e;
-    --surface: #1f1f3d;
-    --text: #e6e6f7;
-    --muted: #a2a3c8;
-    --line: #33335a;
-    --accent: #a9a4ff;
-    --accent-soft: #2c2a5c;
-    --code-bg: #232246;
+    --bg: #0f1d36;
+    --surface: #172a4a;
+    --text: #e6eefb;
+    --muted: #9fb2d3;
+    --line: #e5484d;
+    --accent: #7fb0ff;
+    --accent-soft: #1d3560;
+    --code-bg: #1a2f52;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #16162e;
-  --surface: #1f1f3d;
-  --text: #e6e6f7;
-  --muted: #a2a3c8;
-  --line: #33335a;
-  --accent: #a9a4ff;
-  --accent-soft: #2c2a5c;
-  --code-bg: #232246;
+  --bg: #0f1d36;
+  --surface: #172a4a;
+  --text: #e6eefb;
+  --muted: #9fb2d3;
+  --line: #e5484d;
+  --accent: #7fb0ff;
+  --accent-soft: #1d3560;
+  --code-bg: #1a2f52;
   color-scheme: dark;
 }
 
@@ -209,10 +209,10 @@ img { max-width: 100%; height: auto; }
 }
 .stats {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-  gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px;
+  gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
   overflow: hidden; margin: 0 0 4rem;
 }
-.stats > div { background: var(--surface); padding: 1.25rem 1rem; display: flex; flex-direction: column-reverse; }
+.stats > div { background: var(--surface); padding: 1.25rem 1rem; display: flex; flex-direction: column-reverse; box-shadow: inset -1px 0 0 var(--line), inset 0 -1px 0 var(--line); margin: 0 -1px -1px 0; }
 .stats dd { margin: 0; font-size: 2.2rem; font-weight: 700; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; }
 .stats dt { font-family: var(--sans); font-size: .8rem; color: var(--muted); margin-top: .3rem; }
 .story-heading { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: .3rem 0 2rem; line-height: 1.2; }
