@@ -2,8 +2,9 @@
 layout: default
 ---
 {% assign latest = site.posts | first %}
-<section class="hero-band{% if site.hero_image %} has-image{% endif %}"{% if site.hero_image %} style="background-image: url('{{ site.hero_image | relative_url }}')"{% endif %}>
+<section class="hero-band{% if site.hero_image %} has-art{% endif %}">
   <div class="wrap hero">
+    {% if site.hero_image %}<img class="hero-art" src="{{ site.hero_image | relative_url }}" alt="{{ site.hero_image_alt }}">{% endif %}
     <span class="gold-bar" aria-hidden="true"></span>
     <h1>{{ site.title }}<em>{{ site.hero_line }}</em></h1>
     <p class="lede">{{ site.description }}</p>
