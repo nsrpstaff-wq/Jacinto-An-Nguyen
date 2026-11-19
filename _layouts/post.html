@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{% assign sec = site.sections | where: "key", page.category | first %}
+{% assign words = content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: 220 | plus: 1 %}
+<article class="wrap narrow article">
+  <header class="article-head">
+    <div class="post-meta">
+      {% if sec %}<a class="tag" href="{{ sec.url | relative_url }}">{{ sec.title }}</a><span class="dot">·</span>{% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span class="dot">·</span><span>{{ minutes }} min read</span>
+    </div>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
+    {% if page.course or page.pdf %}
+      <div class="paper-info">
+        {% if page.course %}<span>{{ page.course }}</span>{% endif %}
+        {% if page.pdf %}<a class="button" href="{{ page.pdf | relative_url }}">Download PDF</a>{% endif %}
+      </div>
+    {% endif %}
+  </header>
+
+  {% if page.abstract %}
+    <section class="abstract">
+      <h2>Abstract</h2>
+      <p>{{ page.abstract }}</p>
+    </section>
+  {% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {% if page.tags.size > 0 %}
+    <p class="tags">{% for t in page.tags %}<span class="chip">{{ t }}</span>{% endfor %}</p>
+  {% endif %}
+
+  <nav class="pager" aria-label="More writing">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><small>← Older</small>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+    {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}"><small>Newer →</small>{{ page.next.title }}</a>{% endif %}
+  </nav>
+</article>

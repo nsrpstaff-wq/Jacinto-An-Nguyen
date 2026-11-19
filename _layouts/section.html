@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% assign sec = site.sections | where: "key", page.section | first %}
+<section class="wrap narrow page-head">
+  <p class="eyebrow">Section</p>
+  <h1>{{ sec.title }}</h1>
+  <p class="lede">{{ sec.blurb }}</p>
+</section>
+<section class="wrap narrow">
+  {% assign posts = site.posts | where: "category", page.section %}
+  {% if posts.size > 0 %}
+    {% include post-list.html posts=posts hide_section=true %}
+  {% else %}
+    <p class="empty">Nothing here yet.</p>
+  {% endif %}
+</section>

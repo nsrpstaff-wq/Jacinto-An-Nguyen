@@ -1,0 +1,20 @@
+{%- comment -%} Usage: {% include post-list.html posts=some_posts %} {%- endcomment -%}
+<ul class="post-list">
+  {% for post in include.posts %}
+    {% assign sec = site.sections | where: "key", post.category | first %}
+    <li class="post-item">
+      <div class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        {% if sec and include.hide_section != true %}<span class="dot">·</span><a class="tag" href="{{ sec.url | relative_url }}">{{ sec.title }}</a>{% endif %}
+      </div>
+      <h3 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      {% if post.summary %}
+        <p class="post-summary">{{ post.summary }}</p>
+      {% elsif post.abstract %}
+        <p class="post-summary">{{ post.abstract | truncatewords: 40 }}</p>
+      {% else %}
+        <p class="post-summary">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

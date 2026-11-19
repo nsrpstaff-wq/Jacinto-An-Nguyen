@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------
+#  Site settings — edit these to make the site yours.
+#  (After changing this file, GitHub rebuilds the site in ~1 minute.)
+# ---------------------------------------------------------------
+title: Notes Along the Way
+tagline: Papers, reflections, and things I am learning.
+description: >-
+  A place to publish academic papers, share experiences, and keep
+  notes on what I am learning.
+author:
+  name: Your Name                 # ← change to your name
+  bio: >-
+    Graduate student writing on theology, history, and the life of the mind.
+  email: ""                       # optional; leave empty to hide
+
+# If your repository is named <username>.github.io, leave baseurl empty.
+# If it has another name (e.g. "notes"), set baseurl: "/notes".
+url: ""                           # e.g. https://yourname.github.io
+baseurl: ""
+
+# The three sections of the site. "key" must match the `category:`
+# you write at the top of each post.
+sections:
+  - key: papers
+    title: Papers
+    url: /papers/
+    blurb: Longer academic work — essays, research papers, and presentations.
+  - key: reflections
+    title: Reflections
+    url: /reflections/
+    blurb: Personal essays on experience, practice, and what I have seen along the way.
+  - key: learning
+    title: Learning
+    url: /learning/
+    blurb: Reading notes, summaries, and short pieces on things I am studying.
+
+# ---------------------------------------------------------------
+#  Technical settings — you normally do not need to touch these.
+# ---------------------------------------------------------------
+permalink: /:year/:month/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+markdown: kramdown
+kramdown:
+  input: GFM
+  footnote_backlink: "↩"
+  auto_ids: true
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+feed:
+  path: feed.xml
+exclude:
+  - README.md
+  - HOW-TO-WRITE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

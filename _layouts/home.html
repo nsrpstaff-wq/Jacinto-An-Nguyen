@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<section class="hero wrap">
+  <h1>{{ site.title }}</h1>
+  <p class="lede">{{ site.description }}</p>
+</section>
+
+<section class="sections wrap" aria-label="Sections">
+  {% for s in site.sections %}
+    {% assign count = site.posts | where: "category", s.key | size %}
+    <a class="section-card" href="{{ s.url | relative_url }}">
+      <span class="section-name">{{ s.title }}</span>
+      <span class="section-blurb">{{ s.blurb }}</span>
+      <span class="section-count">{{ count }} {% if count == 1 %}piece{% else %}pieces{% endif %}</span>
+    </a>
+  {% endfor %}
+</section>
+
+<section class="wrap narrow">
+  <h2 class="list-heading">Recent writing</h2>
+  {% assign recent = site.posts | slice: 0, 8 %}
+  {% if recent.size > 0 %}
+    {% include post-list.html posts=recent %}
+    <p class="more"><a href="{{ '/archive/' | relative_url }}">See everything →</a></p>
+  {% else %}
+    <p class="empty">Nothing published yet.</p>
+  {% endif %}
+</section>

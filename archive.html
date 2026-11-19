@@ -1,0 +1,17 @@
+---
+layout: default
+title: Archive
+permalink: /archive/
+---
+<section class="wrap narrow page-head">
+  <p class="eyebrow">Everything</p>
+  <h1>Archive</h1>
+  <p class="lede">All writing, newest first.</p>
+</section>
+<section class="wrap narrow">
+  {% assign by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+  {% for year in by_year %}
+    <h2 class="archive-year">{{ year.name }}</h2>
+    {% include post-list.html posts=year.items %}
+  {% endfor %}
+</section>
