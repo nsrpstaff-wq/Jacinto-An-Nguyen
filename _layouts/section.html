@@ -2,12 +2,20 @@
 layout: default
 ---
 {% assign sec = site.sections | where: "key", page.section | first %}
-<section class="wrap narrow page-head">
+{% capture head %}
   <p class="eyebrow">Section</p>
   <h1>{{ sec.title }}</h1>
   <p class="lede">{{ sec.blurb }}</p>
+{% endcapture %}
+{% if page.banner %}
+<section class="post-banner section-banner">
+  <img class="post-banner-img" src="{{ page.banner | relative_url }}" alt="{{ page.banner_alt }}" style="object-position: {{ page.banner_focus_x | default: 'center' }} {{ page.banner_focus | default: '50%' }}">
+  <div class="wrap narrow post-banner-inner page-head">{{ head }}</div>
 </section>
-<section class="wrap narrow">
+{% else %}
+<section class="wrap narrow page-head">{{ head }}</section>
+{% endif %}
+<section class="wrap narrow{% if page.banner %} after-banner{% endif %}">
   {% assign posts = site.posts | where: "category", page.section %}
   {% if posts.size > 0 %}
     {% include post-list.html posts=posts hide_section=true %}

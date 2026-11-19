@@ -343,6 +343,18 @@ main.ends-with-band { padding-bottom: 0; }
 .article.has-banner { padding-top: 2.5rem; }
 .post-banner .article-head { text-shadow: 0 1px 4px rgba(0,0,0,.55); }
 @media (max-width: 640px) {
-  .post-banner { min-height: 30rem; }
-  .post-banner::after { background: linear-gradient(to top, rgba(7,29,58,.95) 0%, rgba(7,29,58,.75) 45%, rgba(7,29,58,0) 85%); }
+  /* Phones: photo on top, title in a navy band underneath (nothing covers the picture) */
+  .post-banner { display: block; min-height: 0; }
+  .post-banner-img { position: relative; display: block; height: 16rem; }
+  .post-banner::after { display: none; }
+  .post-banner-inner, .post-banner-inner.page-head { padding-top: 1.4rem; padding-bottom: 1.6rem; background: var(--navy); }
+  .post-banner .article-head, .section-banner h1, .section-banner .eyebrow, .section-banner .lede { text-shadow: none; }
 }
+/* Section pages with a photo banner */
+.section-banner .page-head, .post-banner-inner.page-head { padding-top: 6rem; padding-bottom: 2rem; }
+.section-banner h1 { color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.55); }
+.section-banner h1::before { background: var(--gold); }
+.section-banner .eyebrow { color: var(--gold); text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+.section-banner .lede { color: rgba(255,255,255,.9); text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+.after-banner { padding-top: 1.5rem; }
+@media (max-width: 640px) { .section-banner .page-head { padding-top: 1.4rem; padding-bottom: 1.6rem; } }
