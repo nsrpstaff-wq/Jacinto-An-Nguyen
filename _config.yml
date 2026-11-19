@@ -15,7 +15,7 @@ author:
 
 # If your repository is named <username>.github.io, leave baseurl empty.
 # If it has another name (e.g. "notes"), set baseurl: "/notes".
-url:             "https://nsrpstaff-wq.github.io"
+url: "https://nsrpstaff-wq.github.io"
 baseurl: "/Jacinto-An-Nguyen"
 
 # The three sections of the site. "key" must match the `category:`
