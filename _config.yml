@@ -58,6 +58,9 @@ kramdown:
   input: GFM
   footnote_backlink: "↩"
   auto_ids: true
+# Proves to Google Search Console that this site is yours (safe to be public)
+webmaster_verifications:
+  google: Cabe0z-l_riCYBX7_1akfmx6Ra7mBSOiCaifPcA5PEA
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
