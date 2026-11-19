@@ -1,0 +1,85 @@
+---
+layout: default
+---
+{% assign n_papers = site.posts | where: "category", "papers" | size %}
+{% assign n_refl = site.posts | where: "category", "reflections" | size %}
+{% assign n_learn = site.posts | where: "category", "learning" | size %}
+
+<section class="wrap about-hero">
+  <div class="about-hero-text">
+    <p class="eyebrow">{{ page.eyebrow }}</p>
+    <h1>{{ page.greeting }}<br><span class="accent-line">{{ page.identity }}</span></h1>
+    <p class="lede">{{ page.intro }}</p>
+    {% assign live_links = page.links | where_exp: "l", "l.url != ''" %}
+    {% if live_links.size > 0 %}
+      <p class="about-links">
+        {% for l in live_links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+      </p>
+    {% endif %}
+  </div>
+  <div class="about-portrait">
+    {% if page.photo != "" %}
+      <img src="{{ page.photo | relative_url }}" alt="Portrait of {{ site.author.name }}">
+    {% else %}
+      <span class="monogram" aria-hidden="true">{{ page.initials }}</span>
+    {% endif %}
+  </div>
+</section>
+
+<section class="wrap">
+  <dl class="stats">
+    <div><dt>Papers</dt><dd>{{ n_papers }}</dd></div>
+    <div><dt>Reflections</dt><dd>{{ n_refl }}</dd></div>
+    <div><dt>Learning notes</dt><dd>{{ n_learn }}</dd></div>
+    {% for s in page.extra_stats %}
+      <div><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>
+    {% endfor %}
+  </dl>
+</section>
+
+<section class="wrap narrow story">
+  <p class="eyebrow">The story</p>
+  <h2 class="story-heading">How this site came to be</h2>
+  <ol class="timeline">
+    {% for st in page.stages %}
+      <li>
+        <p class="stage-label">{{ st.label }}</p>
+        <h3>{{ st.title }}</h3>
+        <p>{{ st.text }}</p>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+{% if page.photos.size > 0 %}
+<section class="wrap">
+  <div class="gallery">
+    {% for p in page.photos %}
+      <figure>
+        <img src="{{ p.src | relative_url }}" alt="{{ p.caption }}" loading="lazy">
+        {% if p.caption %}<figcaption>{{ p.caption }}</figcaption>{% endif %}
+      </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.belief %}
+<section class="wrap narrow belief">
+  <p class="belief-intro">{{ page.belief_intro }}</p>
+  <blockquote>
+    <p>{{ page.belief }}</p>
+    {% if page.belief_source %}<cite>{{ page.belief_source }}</cite>{% endif %}
+  </blockquote>
+</section>
+{% endif %}
+
+<section class="wrap narrow about-cta">
+  <h2>Read along</h2>
+  <div class="cta-row">
+    {% for s in site.sections %}
+      <a class="button {% unless forloop.first %}button-ghost{% endunless %}" href="{{ s.url | relative_url }}">{{ s.title }}</a>
+    {% endfor %}
+  </div>
+  {{ content }}
+</section>

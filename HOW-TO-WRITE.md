@@ -97,7 +97,7 @@ A **Download PDF** button appears under the title.
 Upload it to `assets/images`, then put this where you want it in the text:
 
 ```markdown
-![A short description of the image](/assets/images/photo.jpg)
+![A short description of the image]({{ site.baseurl }}/assets/images/photo.jpg)
 ```
 
 ## Writing in Word or Google Docs first?
