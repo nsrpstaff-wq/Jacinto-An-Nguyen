@@ -208,11 +208,12 @@ img { max-width: 100%; height: auto; }
   border: 1px solid var(--line);
 }
 .stats {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  display: flex; flex-wrap: wrap;
   gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
   overflow: hidden; margin: 0 0 4rem;
 }
-.stats > div { background: var(--surface); padding: 1.25rem 1rem; display: flex; flex-direction: column-reverse; box-shadow: inset -1px 0 0 var(--line), inset 0 -1px 0 var(--line); margin: 0 -1px -1px 0; }
+.stats > div { background: var(--surface); padding: 1.25rem 1rem; display: flex; flex-direction: column; flex: 1 1 9rem; box-shadow: inset 1px 0 0 var(--line), inset 0 1px 0 var(--line); margin: -1px 0 0 -1px; }
+.stats dd { order: -1; }
 .stats dd { margin: 0; font-size: 2.2rem; font-weight: 700; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; }
 .stats dt { font-family: var(--sans); font-size: .8rem; color: var(--muted); margin-top: .3rem; }
 .story-heading { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: .3rem 0 2rem; line-height: 1.2; }
@@ -247,3 +248,13 @@ img { max-width: 100%; height: auto; }
   .about-hero { grid-template-columns: 1fr; padding-top: 2.5rem; gap: 1.5rem; }
   .about-portrait { order: -1; width: 7.5rem; }
 }
+
+/* ---------- Slide decks in posts ---------- */
+.downloads { display: flex; flex-wrap: wrap; gap: .6rem; }
+.slides { display: grid; gap: 1.75rem; margin-top: 1.5rem; }
+.slides figure { margin: 0; }
+.slides img {
+  width: 100%; height: auto; display: block; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface);
+}
+.slides figcaption { font-family: var(--sans); font-size: .82rem; color: var(--muted); margin-top: .45rem; }
