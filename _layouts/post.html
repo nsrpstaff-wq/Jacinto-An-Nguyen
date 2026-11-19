@@ -4,7 +4,7 @@ layout: default
 {% assign sec = site.sections | where: "key", page.category | first %}
 {% assign words = content | strip_html | number_of_words %}
 {% assign minutes = words | divided_by: 220 | plus: 1 %}
-<article class="wrap narrow article">
+{% capture post_header %}
   <header class="article-head">
     <div class="post-meta">
       {% if sec %}<a class="tag" href="{{ sec.url | relative_url }}">{{ sec.title }}</a><span class="dot">·</span>{% endif %}
@@ -20,6 +20,17 @@ layout: default
       </div>
     {% endif %}
   </header>
+{% endcapture %}
+
+{% if page.banner %}
+<section class="post-banner">
+  <img class="post-banner-img" src="{{ page.banner | relative_url }}" alt="{{ page.banner_alt }}" style="object-position: center {{ page.banner_focus | default: '50%' }}">
+  <div class="wrap narrow post-banner-inner">{{ post_header }}</div>
+</section>
+{% endif %}
+
+<article class="wrap narrow article{% if page.banner %} has-banner{% endif %}">
+  {% unless page.banner %}{{ post_header }}{% endunless %}
 
   {% if page.book %}
     <aside class="book-card" aria-label="About the book">

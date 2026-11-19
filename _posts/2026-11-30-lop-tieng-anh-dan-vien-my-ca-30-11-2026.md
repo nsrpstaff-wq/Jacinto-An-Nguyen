@@ -6,6 +6,9 @@ summary: >-
   Bài học dựa trên bản tin Vatican News về ơn toàn xá nhân Chúa nhật Truyền giáo lần
   thứ 100: bản văn có tô màu, cụm danh từ, cụm động từ và 15 mẫu câu ngữ pháp thông dụng.
 tags: [tiếng Anh, ngữ pháp, Đan viện Mỹ Ca]
+banner: /assets/images/dan-vien-my-ca.jpg
+banner_alt: "Đan viện Mỹ Ca: nhà thờ mái đỏ và tảng đá khắc dòng chữ Trường học phụng sự Chúa, Dominici Schola Servitii"
+banner_focus: "68%"
 doc_pdf: /assets/slides/lop-tieng-anh-2026-11-30.pdf
 doc_dir: /assets/slides/lop-tieng-anh-2026-11-30
 source_url: https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-plenary-indulgence-100th-world-mission-sunday-angelus.html

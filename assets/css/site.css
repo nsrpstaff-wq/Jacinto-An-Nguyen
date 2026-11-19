@@ -328,3 +328,21 @@ main.ends-with-band { padding-bottom: 0; }
 .video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; border: 1px solid var(--line); }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .video-credit { font-family: var(--sans); font-size: .82rem; color: var(--muted); margin-top: .6rem; }
+
+/* ---------- Photo banner behind a post's title (front matter: banner) ---------- */
+.post-banner { position: relative; min-height: 34rem; display: flex; align-items: flex-end; overflow: hidden; background: var(--navy); border-bottom: 4px solid var(--gold); }
+.post-banner-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.post-banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(7,29,58,.94) 0%, rgba(7,29,58,.7) 30%, rgba(7,29,58,0) 62%); }
+.post-banner-inner { position: relative; z-index: 1; width: 100%; padding-top: 6rem; padding-bottom: 2rem; }
+.post-banner .article-head { margin: 0; }
+.post-banner .post-meta, .post-banner .post-meta time { color: rgba(255,255,255,.85); }
+.post-banner .tag { color: var(--gold); }
+.post-banner .article-head h1 { color: #fff; }
+.post-banner .subtitle { color: var(--gold); }
+.post-banner .paper-info { color: rgba(255,255,255,.85); }
+.article.has-banner { padding-top: 2.5rem; }
+.post-banner .article-head { text-shadow: 0 1px 4px rgba(0,0,0,.55); }
+@media (max-width: 640px) {
+  .post-banner { min-height: 30rem; }
+  .post-banner::after { background: linear-gradient(to top, rgba(7,29,58,.95) 0%, rgba(7,29,58,.75) 45%, rgba(7,29,58,0) 85%); }
+}
