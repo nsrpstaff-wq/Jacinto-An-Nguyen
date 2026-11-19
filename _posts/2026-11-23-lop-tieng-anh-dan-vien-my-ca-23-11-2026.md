@@ -6,6 +6,9 @@ summary: >-
   Bài học đọc hiểu bản tin về lời kêu gọi của Đức Hồng y Czerny: con người phải chịu
   trách nhiệm khi dùng trí tuệ nhân tạo trong chiến tranh. Kèm phần phân tích cụm động từ và cụm danh từ.
 tags: [tiếng Anh, từ vựng, Đan viện Mỹ Ca]
+banner: /assets/images/cong-dan-vien-my-ca.jpg
+banner_alt: "Cổng Đan viện Xitô Thánh Mẫu Tâm Mỹ Ca, phía sau là nhà thờ mái đỏ"
+banner_focus: "38%"
 doc_pdf: /assets/slides/lop-tieng-anh-2026-11-23.pdf
 doc_dir: /assets/slides/lop-tieng-anh-2026-11-23
 pages:
