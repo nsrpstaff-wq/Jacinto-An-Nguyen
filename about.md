@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-*Replace this page with a few paragraphs about yourself.* Some ideas:
+This is place, where I will share my experience about researching 
 
 - Who you are and what you study.
 - Why you keep this site: to share papers, to think out loud, to remember what you have learned.
