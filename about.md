@@ -56,11 +56,12 @@ stages:
   - label: "Now"
     title: "What I'm studying and writing"
     text: >-
-      I am pursuing a Ph.D. in Religious Studies at Marquette University in
-      Milwaukee, Wisconsin. My research is in Christian anthropology, especially
-      how the Western Christian understanding of the human person can be brought
-      into conversation with the vision of humanity in Confucianism. Here I share
-      my papers, book reviews, and the English lessons I teach.
+      I am pursuing a Doctor of Philosophy in Religious Studies at Marquette
+      University in Milwaukee, Wisconsin. My research is in Christian anthropology,
+      especially how the Western Christian understanding of the human person can be
+      brought into conversation with the vision of humanity in Confucianism. Here I
+      share my papers, my presentations, favorite books and the English lessons I am
+      teaching the monks from our monastery.
 
 # ---- Photos (optional) ----
 # Upload images to assets/images, then list them here.
