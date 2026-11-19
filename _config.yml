@@ -38,6 +38,7 @@ sections:
 #  Technical settings — you normally do not need to touch these.
 # ---------------------------------------------------------------
 permalink: /:year/:month/:title/
+future: true                       # show posts dated later than today (e.g. an upcoming class)
 defaults:
   - scope:
       path: ""
