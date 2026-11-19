@@ -67,8 +67,27 @@ summary: One sentence shown in the list of posts.
 Write your notes here.
 ```
 
+### A book review (section: Book Reviews)
+
+```markdown
+---
+title: "Review: The Rule of Saint Benedict"
+category: reviews
+summary: One sentence shown in the list of posts.
+book:
+  title: "The Rule of Saint Benedict"
+  author: "Saint Benedict of Nursia"
+  details: "Liturgical Press, 1981 · 208 pages"   # optional
+  cover: /assets/images/rule-cover.jpg           # optional: upload the image first
+  rating: 4                                      # optional: 1 to 5 stars
+---
+
+Write your review here: what the book argues, what worked, what didn't,
+and who should read it.
+```
+
 The `category` line decides which section a piece appears in. It must be exactly
-`papers`, `reflections` or `learning`.
+`papers`, `reflections`, `learning` or `reviews`.
 
 ## Formatting cheat sheet
 

@@ -21,6 +21,19 @@ layout: default
     {% endif %}
   </header>
 
+  {% if page.book %}
+    <aside class="book-card" aria-label="About the book">
+      {% if page.book.cover %}<img class="book-cover" src="{{ page.book.cover | relative_url }}" alt="Cover of {{ page.book.title }}">{% endif %}
+      <div>
+        <p class="eyebrow">The book</p>
+        <p class="book-title">{{ page.book.title }}</p>
+        {% if page.book.author %}<p class="book-author">{{ page.book.author }}</p>{% endif %}
+        {% if page.book.details %}<p class="book-details">{{ page.book.details }}</p>{% endif %}
+        {% if page.book.rating %}<p class="book-rating" aria-label="Rating: {{ page.book.rating }} out of 5">{% for i in (1..5) %}{% if i <= page.book.rating %}★{% else %}☆{% endif %}{% endfor %}</p>{% endif %}
+      </div>
+    </aside>
+  {% endif %}
+
   {% if page.abstract %}
     <section class="abstract">
       <h2>Abstract</h2>

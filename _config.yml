@@ -18,8 +18,8 @@ author:
 url: "https://nsrpstaff-wq.github.io"
 baseurl: "/Jacinto-An-Nguyen"
 
-# The three sections of the site. "key" must match the `category:`
-# you write at the top of each post.
+# The sections of the site (one per menu item). "key" must match the
+# `category:` you write at the top of each post.
 sections:
   - key: papers
     title: Papers
@@ -33,6 +33,10 @@ sections:
     title: Teaching English and Skills
     url: /learning/
     blurb: Lessons, resources, and notes on teaching English and practical skills.
+  - key: reviews
+    title: Book Reviews
+    url: /reviews/
+    blurb: Reviews of books I have read — what they argue, and what stayed with me.
 
 # ---------------------------------------------------------------
 #  Technical settings — you normally do not need to touch these.
